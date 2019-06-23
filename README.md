@@ -12,13 +12,17 @@ N/A
 
 `bookstack_image`: Docker image to  use
 
-`bookstack_volumes`: Directory to store configuration files
+`bookstack_config_directory`: Directory to store configuration files
+
+`bookstack_volumes`: Volumes to mount into the container
 
 `bookstack_ports`: List of ports to expose
 
 `bookstack_docker_additional_options`: [Additional parameters](https://docs.ansible.com/ansible/latest/modules/docker_container_module.html) to add to docker container
 
 `bookstack_environment_variables`: Docker environmental variables
+
+`bookstack_env_options`: Options to change in BookStack's `.env`
 
 ## Dependencies
 

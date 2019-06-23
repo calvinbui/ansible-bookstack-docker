@@ -4,8 +4,9 @@ bookstack_name: bookstack
 bookstack_image: linuxserver/bookstack
 bookstack_ports:
   - 80:80
+bookstack_config_directory: /tmp/bookstack/config
 bookstack_volumes:
-  - /tmp/bookstack/config:/config
+  - "{{ bookstack_config_directory }}:/config"
 bookstack_environment_variables:
   PUID: "1000"
   PGID: "1000"
@@ -17,3 +18,6 @@ bookstack_environment_variables:
 
 bookstack_docker_additional_options:
   restart_policy: unless-stopped
+
+bookstack_env_options:
+  - WKHTMLTOPDF=/usr/bin/wkhtmltopdf
