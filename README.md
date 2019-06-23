@@ -24,6 +24,8 @@ N/A
 
 `bookstack_env_options`: Options to change in BookStack's `.env`
 
+`bookstack_php_options`: Options to change in PHP
+
 ## Dependencies
 
 N/A

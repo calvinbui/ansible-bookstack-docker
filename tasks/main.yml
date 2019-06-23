@@ -32,3 +32,11 @@
     line: "{{ item }}"
   loop: "{{ bookstack_env_options }}"
   notify: Restart BookStack
+
+- name: Configure PHP options
+  lineinfile:
+    dest: "{{ bookstack_config_directory }}/php/php-local.ini"
+    regexp: "^{{ item.split('=')[0] }}="
+    line: "{{ item }}"
+  loop: "{{ bookstack_php_options }}"
+  notify: Restart BookStack

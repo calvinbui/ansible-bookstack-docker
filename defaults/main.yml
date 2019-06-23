@@ -21,3 +21,7 @@ bookstack_docker_additional_options:
 
 bookstack_env_options:
   - WKHTMLTOPDF=/usr/bin/wkhtmltopdf
+
+bookstack_php_options:
+  - post_max_size=10M
+  - upload_max_filesize=10M
